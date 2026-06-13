@@ -58,7 +58,7 @@ const carros = [
     fotos: [
   {
     titulo: "Vista frontal",
-    imagem: "img/Porsche-frente.jpg"
+    imagem: "img/Porsche-frente.jpeg"
   },
   {
     titulo: "Interior",
@@ -257,15 +257,19 @@ function montarSliderDestaques() {
   }
 }
 
-function montarCardsCarros() {
+function montarCardsCarros(lista) {
+
+      if (!lista) {
+    lista = carros;
+  }
   const listaPosts = document.getElementById("lista-posts");
 
   if (listaPosts) {
     listaPosts.innerHTML = "";
 
-    carros.forEach(function(carro) {
+    lista.forEach(function(carro) {
       listaPosts.innerHTML += `
-        <article class="col-md-6">
+        <article class="col-12 col-md-6">
 
           <div class="card h-100">
 
@@ -298,6 +302,52 @@ function montarCardsCarros() {
     });
   }
 }
+
+const campoPesquisa = document.getElementById("campo-pesquisa");
+
+if (campoPesquisa) {
+  campoPesquisa.addEventListener("input", function() {
+
+    const textoPesquisa = campoPesquisa.value.toLowerCase();
+
+    const resultadoPesquisa = carros.filter(function(carro) {
+      return (
+        carro.nome.toLowerCase().includes(textoPesquisa) ||
+        carro.marca.toLowerCase().includes(textoPesquisa) ||
+        carro.motor.toLowerCase().includes(textoPesquisa) ||
+        String(carro.ano).includes(textoPesquisa)
+      );
+    });
+
+    montarCardsCarros(resultadoPesquisa);
+
+  });
+}
+
+const marcasFiltro = document.querySelectorAll(".marca-filtro");
+
+marcasFiltro.forEach(function(marcaItem) {
+
+  marcaItem.addEventListener("click", function() {
+
+    const marcaClicada = marcaItem.dataset.marca;
+
+    if (marcaClicada === "Todos") {
+
+      montarCardsCarros(carros);
+
+      return;
+    }
+
+    const carrosFiltrados = carros.filter(function(carro) {
+      return carro.marca === marcaClicada;
+    });
+
+    montarCardsCarros(carrosFiltrados);
+
+  });
+
+});
 
 function mostrarDetalhes() {
   const detalhesPost = document.getElementById("detalhes-post");
@@ -334,7 +384,7 @@ function mostrarDetalhes() {
 
             ${carro.fotos.map(function(foto) {
               return `
-                <div class="col-md-4 mb-3">
+                <div class="col-12 col-md-4 mb-3">
                   <div class="card h-100">
                     <img src="${foto.imagem}" class="card-img-top" alt="${foto.titulo}">
                     <div class="card-body">

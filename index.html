@@ -58,21 +58,27 @@
         <aside class="col-md-4">
           <div class="card p-3 mb-4">
             <h5>Pesquisa</h5>
-            <input type="text" class="form-control mb-2" placeholder="Buscar carro">
+            <input
+  type="text"
+  id="campo-pesquisa"
+  class="form-control mb-2"
+  placeholder="Buscar por nome, marca, motor ou ano">
             <button class="btn btn-danger w-100">OK</button>
           </div>
 
           <div class="card p-3 mb-4">
             <h5>Marcas</h5>
             <ul class="list-group">
-              <li class="list-group-item">Ferrari</li>
-              <li class="list-group-item">Lamborghini</li>
-              <li class="list-group-item">Porsche</li>
-              <li class="list-group-item">McLaren</li>
-              <li class="list-group-item">Bugatti</li>
-              <li class="list-group-item">Nissan</li>
-              <li class="list-group-item">Chevrolet</li>
-              <li class="list-group-item">Audi</li>
+                <li class="list-group-item marca-filtro" data-marca="Todos">Todos os carros</li>
+                <li class="list-group-item marca-filtro" data-marca="Ferrari">Ferrari</li>
+                <li class="list-group-item marca-filtro" data-marca="Lamborghini">Lamborghini</li>
+                <li class="list-group-item marca-filtro" data-marca="Porsche">Porsche</li>
+                <li class="list-group-item marca-filtro" data-marca="McLaren">McLaren</li>
+                <li class="list-group-item marca-filtro" data-marca="Bugatti">Bugatti</li>
+                <li class="list-group-item marca-filtro" data-marca="Nissan">Nissan</li>
+                <li class="list-group-item marca-filtro" data-marca="Chevrolet">Chevrolet</li>
+                <li class="list-group-item marca-filtro" data-marca="Audi">Audi</li>
+                
             </ul>
           </div>
 
@@ -88,15 +94,38 @@
       </div>
     </div>
 
-    <section id="sobre" class="container mt-4 mb-4">
-      <div class="card p-4">
-        <h2>Sobre o Autor</h2>
+  <section id="sobre" class="container mt-4 mb-4">
+  <div class="card p-4">
+
+    <h2>Informações do Aluno</h2>
+
+    <div class="row mt-3">
+
+      <div class="col-md-8">
+        <h4>Sobre</h4>
         <p>
-          Site desenvolvido por Luiz Felipe como projeto acadêmico da disciplina
-          Desenvolvimento Web Front-End da PUC Minas.
+          Site desenvolvido para apresentar carros esportivos de forma dinâmica,
+          utilizando HTML, CSS, Bootstrap e JavaScript. O projeto contém slider,
+          cards, página de detalhes e galeria de fotos.
         </p>
       </div>
-    </section>
+
+      <div class="col-md-4">
+        <h4>Autoria</h4>
+
+        <p><strong>Aluno:</strong> Luiz Felipe</p>
+        <p><strong>Curso:</strong> Sistemas de Informação</p>
+        <p><strong>Turma:</strong> Noite</p>
+
+        <p><strong>Redes Sociais:</strong></p>
+        <a href="https://github.com/luizfelipee24423-a11y" class="btn btn-dark btn-sm">GitHub</a>
+        <a href="https://www.linkedin.com/in/luizfbrito/" class="btn btn-primary btn-sm">LinkedIn</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
   </main>
 
