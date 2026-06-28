@@ -1,214 +1,47 @@
-const carros = [
-  {
-    id: 1,
-    nome: "Ferrari SF90 Stradale",
-    marca: "Ferrari",
-    ano: 2024,
-    potencia: "1000 cv",
-    velocidade: "340 km/h",
-    motor: "V8 Biturbo Híbrido",
-    descricao: "Um dos supercarros mais avançados da Ferrari, combinando desempenho extremo e tecnologia híbrida.",
-    destaque: true,
-    imagemPrincipal: "img/ferrari-sf90.jpg",
-    fotos: [
-      { titulo: "Vista frontal", imagem: "img/ferrari-frente.jpg" },
-      { titulo: "Interior", imagem: "img/ferrari-interior.jpg" },
-      { titulo: "Motor", imagem: "img/ferrari-motor.jpg" }
-    ]
-  },
+const carrosIniciais = [
+    { id: 1, nome: "Ferrari SF90 Stradale", marca: "Ferrari", ano: 2024, potencia: "1000 cv", velocidade: "340 km/h", motor: "V8 Biturbo Híbrido", descricao: "Um dos supercarros mais avançados da Ferrari, combinando desempenho extremo e tecnologia híbrida.", destaque: true, imagemPrincipal: "img/ferrari-sf90.jpg", fotos: [ { titulo: "Vista frontal", imagem: "img/ferrari-frente.jpg" }, { titulo: "Interior", imagem: "img/ferrari-interior.jpg" }, { titulo: "Motor", imagem: "img/ferrari-motor.jpg" } ] },
+    { id: 2, nome: "Lamborghini Aventador", marca: "Lamborghini", ano: 2023, potencia: "770 cv", velocidade: "350 km/h", motor: "V12 Aspirado", descricao: "Ícone da Lamborghini conhecido pelo design agressivo e desempenho impressionante.", destaque: true, imagemPrincipal: "img/lamborghini-aventador.jpg", fotos: [ { titulo: "Vista frontal", imagem: "img/lamborghini-frente.jpg" }, { titulo: "Interior", imagem: "img/lamborghini-interior.jpg" }, { titulo: "Motor", imagem: "img/lamborghini-motor.jpg" } ] },
+    { id: 3, nome: "Porsche 911 Turbo S", marca: "Porsche", ano: 2024, potencia: "650 cv", velocidade: "330 km/h", motor: "Boxer 6 Cilindros Biturbo", descricao: "Combina luxo, tecnologia e desempenho em um dos esportivos mais respeitados do mundo.", destaque: false, imagemPrincipal: "img/porsche-911.jpg", fotos: [ { titulo: "Vista frontal", imagem: "img/Porsche-frente.jpeg" }, { titulo: "Interior", imagem: "img/Porsche-interior.jpg" }, { titulo: "Motor", imagem: "img/Porsche-motor.jpg" } ] },
+    { id: 4, nome: "McLaren 720S", marca: "McLaren", ano: 2024, potencia: "720 cv", velocidade: "341 km/h", motor: "V8 Biturbo", descricao: "Supercarro britânico extremamente leve e focado em desempenho nas pistas.", destaque: true, imagemPrincipal: "img/mclaren-720s.jpg", fotos: [ { titulo: "Vista frontal", imagem: "img/McLaren-frente.jpg" }, { titulo: "Interior", imagem: "img/McLaren-interior.jpg" }, { titulo: "Motor", imagem: "img/McLaren-motor.jpg" } ] },
+    { id: 5, nome: "Bugatti Chiron", marca: "Bugatti", ano: 2024, potencia: "1500 cv", velocidade: "420 km/h", motor: "W16 Quad-Turbo", descricao: "Um dos carros mais rápidos e exclusivos já produzidos na história.", destaque: true, imagemPrincipal: "img/bugatti-chiron.jpeg", fotos: [ { titulo: "Vista frontal", imagem: "img/bugatti-frente.jpg" }, { titulo: "Interior", imagem: "img/bugatti-interior.jpg" }, { titulo: "Motor", imagem: "img/bugatti-motor.jpg" } ] },
+    { id: 6, nome: "Nissan GT-R", marca: "Nissan", ano: 2024, potencia: "565 cv", velocidade: "315 km/h", motor: "V6 Biturbo", descricao: "Conhecido como Godzilla, é famoso pela tecnologia e desempenho impressionante.", destaque: false, imagemPrincipal: "img/nissan-gtr.jpg", fotos: [ { titulo: "Vista frontal", imagem: "img/nissan-frente.jpg" }, { titulo: "Interior", imagem: "img/nissan-interior.jpg" }, { titulo: "Motor", imagem: "img/nissan-motor.jpg" } ] },
+    { id: 7, nome: "Chevrolet Corvette C8", marca: "Chevrolet", ano: 2024, potencia: "495 cv", velocidade: "312 km/h", motor: "V8 Aspirado", descricao: "Primeiro Corvette com motor central, trazendo desempenho de supercarro.", destaque: false, imagemPrincipal: "img/corvette-c8.jpg", fotos: [ { titulo: "Vista frontal", imagem: "img/chevrolet-frente.jpg" }, { titulo: "Interior", imagem: "img/chevrolet-interior.jpg" }, { titulo: "Motor", imagem: "img/chevrolet-motor.jpg" } ] },
+    { id: 8, nome: "Audi R8", marca: "Audi", ano: 2024, potencia: "620 cv", velocidade: "331 km/h", motor: "V10 Aspirado", descricao: "Esportivo de luxo que compartilha tecnologia com a Lamborghini.", destaque: false, imagemPrincipal: "img/audi-r8.jpg", fotos: [ { titulo: "Vista frontal", imagem: "img/audi-frontal.jpg" }, { titulo: "Interior", imagem: "img/audi-interior.jpg" }, { titulo: "Motor", imagem: "img/audi-motor.jpg" } ] }
+];
 
-  {
-    id: 2,
-    nome: "Lamborghini Aventador",
-    marca: "Lamborghini",
-    ano: 2023,
-    potencia: "770 cv",
-    velocidade: "350 km/h",
-    motor: "V12 Aspirado",
-    descricao: "Ícone da Lamborghini conhecido pelo design agressivo e desempenho impressionante.",
-    destaque: true,
-    imagemPrincipal: "img/lamborghini-aventador.jpg",
-    fotos: [
-  {
-    titulo: "Vista frontal",
-    imagem: "img/lamborghini-frente.jpg"
-  },
-  {
-    titulo: "Interior",
-    imagem: "img/lamborghini-interior.jpg"
-  },
-  {
-    titulo: "Motor",
-    imagem: "img/lamborghini-motor.jpg"
-  }
-]
-  },
 
-  {
-    id: 3,
-    nome: "Porsche 911 Turbo S",
-    marca: "Porsche",
-    ano: 2024,
-    potencia: "650 cv",
-    velocidade: "330 km/h",
-    motor: "Boxer 6 Cilindros Biturbo",
-    descricao: "Combina luxo, tecnologia e desempenho em um dos esportivos mais respeitados do mundo.",
-    destaque: false,
-    imagemPrincipal: "img/porsche-911.jpg",
-    fotos: [
-  {
-    titulo: "Vista frontal",
-    imagem: "img/Porsche-frente.jpeg"
-  },
-  {
-    titulo: "Interior",
-    imagem: "img/Porsche-interior.jpg"
-  },
-  {
-    titulo: "Motor",
-    imagem: "img/Porsche-motor.jpg"
-  }
-]
+const usuariosIniciais = [
+    {
+        "id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+        "login": "admin",
+        "senha": "123",
+        "nome": "Administrador do Sistema",
+        "email": "admin@abc.com",
+        "admin": true
+    },
+    {
+        "id": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e",
+        "login": "user",
+        "senha": "123",
+        "nome": "Usuario Comum",
+        "email": "user@abc.com",
+        "admin": false
+    }
+];
 
-  },
-  {
-    id: 4,
-    nome: "McLaren 720S",
-    marca: "McLaren",
-    ano: 2024,
-    potencia: "720 cv",
-    velocidade: "341 km/h",
-    motor: "V8 Biturbo",
-    descricao: "Supercarro britânico extremamente leve e focado em desempenho nas pistas.",
-    destaque: true,
-    imagemPrincipal: "img/mclaren-720s.jpg",
-    fotos: [
-  {
-    titulo: "Vista frontal",
-    imagem: "img/McLaren-frente.jpg"
-  },
-  {
-    titulo: "Interior",
-    imagem: "img/McLaren-interior.jpg"
-  },
-  {
-    titulo: "Motor",
-    imagem: "img/McLaren-motor.jpg"
-  }
-]
-  },
 
-  {
-    id: 5,
-    nome: "Bugatti Chiron",
-    marca: "Bugatti",
-    ano: 2024,
-    potencia: "1500 cv",
-    velocidade: "420 km/h",
-    motor: "W16 Quad-Turbo",
-    descricao: "Um dos carros mais rápidos e exclusivos já produzidos na história.",
-    destaque: true,
-    imagemPrincipal: "img/bugatti-chiron.jpeg",
-   fotos: [
-  {
-    titulo: "Vista frontal",
-    imagem: "img/bugatti-frente.jpg"
-  },
-  {
-    titulo: "Interior",
-    imagem: "img/bugatti-interior.jpg"
-  },
-  {
-    titulo: "Motor",
-    imagem: "img/bugatti-motor.jpg"
-  }
-]
-  },
-
-  {
-    id: 6,
-    nome: "Nissan GT-R",
-    marca: "Nissan",
-    ano: 2024,
-    potencia: "565 cv",
-    velocidade: "315 km/h",
-    motor: "V6 Biturbo",
-    descricao: "Conhecido como Godzilla, é famoso pela tecnologia e desempenho impressionante.",
-    destaque: false,
-    imagemPrincipal: "img/nissan-gtr.jpg",
-    fotos: [
-  {
-    titulo: "Vista frontal",
-    imagem: "img/nissan-frente.jpg"
-  },
-  {
-    titulo: "Interior",
-    imagem: "img/nissan-interior.jpg"
-  },
-  {
-    titulo: "Motor",
-    imagem: "img/nissan-motor.jpg"
-  }
-]
-  },
-
-  {
-    id: 7,
-    nome: "Chevrolet Corvette C8",
-    marca: "Chevrolet",
-    ano: 2024,
-    potencia: "495 cv",
-    velocidade: "312 km/h",
-    motor: "V8 Aspirado",
-    descricao: "Primeiro Corvette com motor central, trazendo desempenho de supercarro.",
-    destaque: false,
-    imagemPrincipal: "img/corvette-c8.jpg",
-    fotos: [
-  {
-    titulo: "Vista frontal",
-    imagem: "img/chevrolet-frente.jpg"
-  },
-  {
-    titulo: "Interior",
-    imagem: "img/chevrolet-interior.jpg"
-  },
-  {
-    titulo: "Motor",
-    imagem: "img/chevrolet-motor.jpg"
-  }
-]
-  },
-
-  {
-    id: 8,
-    nome: "Audi R8",
-    marca: "Audi",
-    ano: 2024,
-    potencia: "620 cv",
-    velocidade: "331 km/h",
-    motor: "V10 Aspirado",
-    descricao: "Esportivo de luxo que compartilha tecnologia com a Lamborghini.",
-    destaque: false,
-    imagemPrincipal: "img/audi-r8.jpg",
-    fotos: [
-  {
-    titulo: "Vista frontal",
-    imagem: "img/audi-frontal.jpg"
-  },
-  {
-    titulo: "Interior",
-    imagem: "img/audi-interior.jpg"
-  },
-  {
-    titulo: "Motor",
-    imagem: "img/audi-motor.jpg"
-  }
-  
-]
-
+function inicializarLocalStorage() {
+    if (!localStorage.getItem('carros')) {
+        localStorage.setItem('carros', JSON.stringify(carrosIniciais));
+    }
+    if (!localStorage.getItem('usuarios')) {
+        localStorage.setItem('usuarios', JSON.stringify(usuariosIniciais));
+    }
 }
 
-]
+inicializarLocalStorage();
+
+const carros = JSON.parse(localStorage.getItem('carros'));
 
 function montarSliderDestaques() {
   const areaDestaques = document.getElementById("destaques");
