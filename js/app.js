@@ -199,7 +199,7 @@ function atualizarMenu() {
 
 window.fazerLogout = function() {
     sessionStorage.removeItem('usuarioLogado');
-    window.location.href = 'index.html';
+    window.location.href = 'login.html';
 };
 
 
