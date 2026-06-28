@@ -25,6 +25,11 @@
             <li class="nav-item"><a class="nav-link" href="#destaques">Destaques</a></li>
             <li class="nav-item"><a class="nav-link" href="#carros">Carros</a></li>
             <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+            
+            <li class="nav-item d-none" id="nav-cadastro"><a class="nav-link text-warning" href="cadastro_itens.html">Cadastro (Admin)</a></li>
+            <li class="nav-item d-none" id="nav-favoritos"><a class="nav-link text-danger" href="favoritos.html">Favoritos</a></li>
+            <li class="nav-item" id="nav-login"><a class="nav-link" href="login.html">Login</a></li>
+            <li class="nav-item d-none" id="nav-logout"><a class="nav-link" href="#" onclick="fazerLogout()">Logout</a></li>
           </ul>
         </div>
       </div>
@@ -63,7 +68,6 @@
   id="campo-pesquisa"
   class="form-control mb-2"
   placeholder="Buscar por nome, marca, motor ou ano">
-            <button class="btn btn-danger w-100">OK</button>
           </div>
 
           <div class="card p-3 mb-4">
@@ -78,7 +82,6 @@
                 <li class="list-group-item marca-filtro" data-marca="Nissan">Nissan</li>
                 <li class="list-group-item marca-filtro" data-marca="Chevrolet">Chevrolet</li>
                 <li class="list-group-item marca-filtro" data-marca="Audi">Audi</li>
-                
             </ul>
           </div>
 
@@ -118,8 +121,8 @@
         <p><strong>Turma:</strong> Noite</p>
 
         <p><strong>Redes Sociais:</strong></p>
-        <a href="https://github.com/luizfelipee24423-a11y" class="btn btn-dark btn-sm">GitHub</a>
-        <a href="https://www.linkedin.com/in/luizfbrito/" class="btn btn-primary btn-sm">LinkedIn</a>
+        <a href="https://github.com/luizfelipee24423-a11y" class="btn btn-dark btn-sm" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/luizfbrito/" class="btn btn-primary btn-sm" target="_blank">LinkedIn</a>
       </div>
 
     </div>

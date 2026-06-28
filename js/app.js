@@ -1,15 +1,141 @@
 const carrosIniciais = [
-    { id: 1, nome: "Ferrari SF90 Stradale", marca: "Ferrari", ano: 2024, potencia: "1000 cv", velocidade: "340 km/h", motor: "V8 Biturbo Híbrido", descricao: "Um dos supercarros mais avançados da Ferrari, combinando desempenho extremo e tecnologia híbrida.", destaque: true, imagemPrincipal: "img/ferrari-sf90.jpg", fotos: [ { titulo: "Vista frontal", imagem: "img/ferrari-frente.jpg" }, { titulo: "Interior", imagem: "img/ferrari-interior.jpg" }, { titulo: "Motor", imagem: "img/ferrari-motor.jpg" } ] },
-    { id: 2, nome: "Lamborghini Aventador", marca: "Lamborghini", ano: 2023, potencia: "770 cv", velocidade: "350 km/h", motor: "V12 Aspirado", descricao: "Ícone da Lamborghini conhecido pelo design agressivo e desempenho impressionante.", destaque: true, imagemPrincipal: "img/lamborghini-aventador.jpg", fotos: [ { titulo: "Vista frontal", imagem: "img/lamborghini-frente.jpg" }, { titulo: "Interior", imagem: "img/lamborghini-interior.jpg" }, { titulo: "Motor", imagem: "img/lamborghini-motor.jpg" } ] },
-    { id: 3, nome: "Porsche 911 Turbo S", marca: "Porsche", ano: 2024, potencia: "650 cv", velocidade: "330 km/h", motor: "Boxer 6 Cilindros Biturbo", descricao: "Combina luxo, tecnologia e desempenho em um dos esportivos mais respeitados do mundo.", destaque: false, imagemPrincipal: "img/porsche-911.jpg", fotos: [ { titulo: "Vista frontal", imagem: "img/Porsche-frente.jpeg" }, { titulo: "Interior", imagem: "img/Porsche-interior.jpg" }, { titulo: "Motor", imagem: "img/Porsche-motor.jpg" } ] },
-    { id: 4, nome: "McLaren 720S", marca: "McLaren", ano: 2024, potencia: "720 cv", velocidade: "341 km/h", motor: "V8 Biturbo", descricao: "Supercarro britânico extremamente leve e focado em desempenho nas pistas.", destaque: true, imagemPrincipal: "img/mclaren-720s.jpg", fotos: [ { titulo: "Vista frontal", imagem: "img/McLaren-frente.jpg" }, { titulo: "Interior", imagem: "img/McLaren-interior.jpg" }, { titulo: "Motor", imagem: "img/McLaren-motor.jpg" } ] },
-    { id: 5, nome: "Bugatti Chiron", marca: "Bugatti", ano: 2024, potencia: "1500 cv", velocidade: "420 km/h", motor: "W16 Quad-Turbo", descricao: "Um dos carros mais rápidos e exclusivos já produzidos na história.", destaque: true, imagemPrincipal: "img/bugatti-chiron.jpeg", fotos: [ { titulo: "Vista frontal", imagem: "img/bugatti-frente.jpg" }, { titulo: "Interior", imagem: "img/bugatti-interior.jpg" }, { titulo: "Motor", imagem: "img/bugatti-motor.jpg" } ] },
-    { id: 6, nome: "Nissan GT-R", marca: "Nissan", ano: 2024, potencia: "565 cv", velocidade: "315 km/h", motor: "V6 Biturbo", descricao: "Conhecido como Godzilla, é famoso pela tecnologia e desempenho impressionante.", destaque: false, imagemPrincipal: "img/nissan-gtr.jpg", fotos: [ { titulo: "Vista frontal", imagem: "img/nissan-frente.jpg" }, { titulo: "Interior", imagem: "img/nissan-interior.jpg" }, { titulo: "Motor", imagem: "img/nissan-motor.jpg" } ] },
-    { id: 7, nome: "Chevrolet Corvette C8", marca: "Chevrolet", ano: 2024, potencia: "495 cv", velocidade: "312 km/h", motor: "V8 Aspirado", descricao: "Primeiro Corvette com motor central, trazendo desempenho de supercarro.", destaque: false, imagemPrincipal: "img/corvette-c8.jpg", fotos: [ { titulo: "Vista frontal", imagem: "img/chevrolet-frente.jpg" }, { titulo: "Interior", imagem: "img/chevrolet-interior.jpg" }, { titulo: "Motor", imagem: "img/chevrolet-motor.jpg" } ] },
-    { id: 8, nome: "Audi R8", marca: "Audi", ano: 2024, potencia: "620 cv", velocidade: "331 km/h", motor: "V10 Aspirado", descricao: "Esportivo de luxo que compartilha tecnologia com a Lamborghini.", destaque: false, imagemPrincipal: "img/audi-r8.jpg", fotos: [ { titulo: "Vista frontal", imagem: "img/audi-frontal.jpg" }, { titulo: "Interior", imagem: "img/audi-interior.jpg" }, { titulo: "Motor", imagem: "img/audi-motor.jpg" } ] }
+  {
+    id: 1,
+    nome: "Ferrari SF90 Stradale",
+    marca: "Ferrari",
+    ano: 2024,
+    potencia: "1000 cv",
+    velocidade: "340 km/h",
+    motor: "V8 Biturbo Híbrido",
+    descricao: "Um dos supercarros mais avançados da Ferrari, combinando desempenho extremo e tecnologia híbrida.",
+    destaque: true,
+    imagemPrincipal: "img/ferrari-sf90.jpg",
+    fotos: [
+      { titulo: "Vista frontal", imagem: "img/ferrari-frente.jpg" },
+      { titulo: "Interior", imagem: "img/ferrari-interior.jpg" },
+      { titulo: "Motor", imagem: "img/ferrari-motor.jpg" }
+    ]
+  },
+  {
+    id: 2,
+    nome: "Lamborghini Aventador",
+    marca: "Lamborghini",
+    ano: 2023,
+    potencia: "770 cv",
+    velocidade: "350 km/h",
+    motor: "V12 Aspirado",
+    descricao: "Ícone da Lamborghini conhecido pelo design agressivo e desempenho impressionante.",
+    destaque: true,
+    imagemPrincipal: "img/lamborghini-aventador.jpg",
+    fotos: [
+      { titulo: "Vista frontal", imagem: "img/lamborghini-frente.jpg" },
+      { titulo: "Interior", imagem: "img/lamborghini-interior.jpg" },
+      { titulo: "Motor", imagem: "img/lamborghini-motor.jpg" }
+    ]
+  },
+  {
+    id: 3,
+    nome: "Porsche 911 Turbo S",
+    marca: "Porsche",
+    ano: 2024,
+    potencia: "650 cv",
+    velocidade: "330 km/h",
+    motor: "Boxer 6 Cilindros Biturbo",
+    descricao: "Combina luxo, tecnologia e desempenho em um dos esportivos mais respeitados do mundo.",
+    destaque: false,
+    imagemPrincipal: "img/porsche-911.jpg",
+    fotos: [
+      { titulo: "Vista frontal", imagem: "img/Porsche-frente.jpeg" },
+      { titulo: "Interior", imagem: "img/Porsche-interior.jpg" },
+      { titulo: "Motor", imagem: "img/Porsche-motor.jpg" }
+    ]
+  },
+  {
+    id: 4,
+    nome: "McLaren 720S",
+    marca: "McLaren",
+    ano: 2024,
+    potencia: "720 cv",
+    velocidade: "341 km/h",
+    motor: "V8 Biturbo",
+    descricao: "Supercarro britânico extremamente leve e focado em desempenho nas pistas.",
+    destaque: true,
+    imagemPrincipal: "img/mclaren-720s.jpg",
+    fotos: [
+      { titulo: "Vista frontal", imagem: "img/McLaren-frente.jpg" },
+      { titulo: "Interior", imagem: "img/McLaren-interior.jpg" },
+      { titulo: "Motor", imagem: "img/McLaren-motor.jpg" }
+    ]
+  },
+  {
+    id: 5,
+    nome: "Bugatti Chiron",
+    marca: "Bugatti",
+    ano: 2024,
+    potencia: "1500 cv",
+    velocidade: "420 km/h",
+    motor: "W16 Quad-Turbo",
+    descricao: "Um dos carros mais rápidos e exclusivos já produzidos na história.",
+    destaque: true,
+    imagemPrincipal: "img/bugatti-chiron.jpeg",
+    fotos: [
+      { titulo: "Vista frontal", imagem: "img/bugatti-frente.jpg" },
+      { titulo: "Interior", imagem: "img/bugatti-interior.jpg" },
+      { titulo: "Motor", imagem: "img/bugatti-motor.jpg" }
+    ]
+  },
+  {
+    id: 6,
+    nome: "Nissan GT-R",
+    marca: "Nissan",
+    ano: 2024,
+    potencia: "565 cv",
+    velocidade: "315 km/h",
+    motor: "V6 Biturbo",
+    descricao: "Conhecido como Godzilla, é famoso pela tecnologia e desempenho impressionante.",
+    destaque: false,
+    imagemPrincipal: "img/nissan-gtr.jpg",
+    fotos: [
+      { titulo: "Vista frontal", imagem: "img/nissan-frente.jpg" },
+      { titulo: "Interior", imagem: "img/nissan-interior.jpg" },
+      { titulo: "Motor", imagem: "img/nissan-motor.jpg" }
+    ]
+  },
+  {
+    id: 7,
+    nome: "Chevrolet Corvette C8",
+    marca: "Chevrolet",
+    ano: 2024,
+    potencia: "495 cv",
+    velocidade: "312 km/h",
+    motor: "V8 Aspirado",
+    descricao: "Primeiro Corvette com motor central, trazendo desempenho de supercarro.",
+    destaque: false,
+    imagemPrincipal: "img/corvette-c8.jpg",
+    fotos: [
+      { titulo: "Vista frontal", imagem: "img/chevrolet-frente.jpg" },
+      { titulo: "Interior", imagem: "img/chevrolet-interior.jpg" },
+      { titulo: "Motor", imagem: "img/chevrolet-motor.jpg" }
+    ]
+  },
+  {
+    id: 8,
+    nome: "Audi R8",
+    marca: "Audi",
+    ano: 2024,
+    potencia: "620 cv",
+    velocidade: "331 km/h",
+    motor: "V10 Aspirado",
+    descricao: "Esportivo de luxo que compartilha tecnologia com a Lamborghini.",
+    destaque: false,
+    imagemPrincipal: "img/audi-r8.jpg",
+    fotos: [
+      { titulo: "Vista frontal", imagem: "img/audi-frontal.jpg" },
+      { titulo: "Interior", imagem: "img/audi-interior.jpg" },
+      { titulo: "Motor", imagem: "img/audi-motor.jpg" }
+    ]
+  }
 ];
-
-
 const usuariosIniciais = [
     {
         "id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
@@ -29,7 +155,6 @@ const usuariosIniciais = [
     }
 ];
 
-
 function inicializarLocalStorage() {
     if (!localStorage.getItem('carros')) {
         localStorage.setItem('carros', JSON.stringify(carrosIniciais));
@@ -37,209 +162,261 @@ function inicializarLocalStorage() {
     if (!localStorage.getItem('usuarios')) {
         localStorage.setItem('usuarios', JSON.stringify(usuariosIniciais));
     }
+    if (!localStorage.getItem('favoritos')) {
+        localStorage.setItem('favoritos', JSON.stringify({}));
+    }
 }
 
 inicializarLocalStorage();
 
 const carros = JSON.parse(localStorage.getItem('carros'));
+let listaAtualCarros = carros; 
 
-function montarSliderDestaques() {
-  const areaDestaques = document.getElementById("destaques");
 
-  if (areaDestaques) {
-    const carrosDestaque = carros.filter(function(carro) {
-      return carro.destaque === true;
-    });
+function atualizarMenu() {
+    const navCadastro = document.getElementById('nav-cadastro');
+    const navFavoritos = document.getElementById('nav-favoritos');
+    const navLogin = document.getElementById('nav-login');
+    const navLogout = document.getElementById('nav-logout');
+    
+    const usuarioLogado = JSON.parse(sessionStorage.getItem('usuarioLogado'));
 
-    areaDestaques.innerHTML = `
-      <h2 class="mb-4">Itens em Destaque</h2>
-
-      <div id="carouselDestaques" class="carousel slide" data-bs-ride="carousel">
-
-        <div class="carousel-inner"></div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestaques" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselDestaques" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
-
-      </div>
-    `;
-
-    const carouselInner = document.querySelector(".carousel-inner");
-
-    carrosDestaque.forEach(function(carro, indice) {
-      carouselInner.innerHTML += `
-        <div class="carousel-item ${indice === 0 ? "active" : ""}">
-
-          <a href="detalhes.html?id=${carro.id}">
-            <img src="${carro.imagemPrincipal}" class="d-block w-100 imagem-slider" alt="${carro.nome}">
-          </a>
-
-          <div class="carousel-caption d-none d-md-block">
-            <h5>${carro.nome}</h5>
-            <p>${carro.descricao}</p>
-          </div>
-
-        </div>
-      `;
-    });
-  }
+    if (usuarioLogado) {
+        if (navLogin) navLogin.classList.add('d-none');
+        if (navLogout) navLogout.classList.remove('d-none');
+        if (navFavoritos) navFavoritos.classList.remove('d-none'); 
+        
+        if (usuarioLogado.admin && navCadastro) {
+            navCadastro.classList.remove('d-none'); 
+        }
+    } else {
+        if (navLogin) navLogin.classList.remove('d-none');
+        if (navLogout) navLogout.classList.add('d-none');
+        if (navFavoritos) navFavoritos.classList.add('d-none');
+        if (navCadastro) navCadastro.classList.add('d-none');
+    }
 }
 
-function montarCardsCarros(lista) {
+window.fazerLogout = function() {
+    sessionStorage.removeItem('usuarioLogado');
+    window.location.href = 'index.html';
+};
 
-      if (!lista) {
-    lista = carros;
-  }
-  const listaPosts = document.getElementById("lista-posts");
 
-  if (listaPosts) {
-    listaPosts.innerHTML = "";
+function getFavoritosUsuario() {
+    const usuario = JSON.parse(sessionStorage.getItem('usuarioLogado'));
+    if (!usuario) return [];
+    const todosFavoritos = JSON.parse(localStorage.getItem('favoritos'));
+    return todosFavoritos[usuario.id] || [];
+}
 
-    lista.forEach(function(carro) {
-      listaPosts.innerHTML += `
-        <article class="col-12 col-md-6">
+window.toggleFavorito = function(carroId) {
+    const usuario = JSON.parse(sessionStorage.getItem('usuarioLogado'));
+    if (!usuario) {
+        alert('Você precisa estar logado para favoritar um item!');
+        window.location.href = 'login.html';
+        return;
+    }
 
-          <div class="card h-100">
+    const todosFavoritos = JSON.parse(localStorage.getItem('favoritos'));
+    if (!todosFavoritos[usuario.id]) {
+        todosFavoritos[usuario.id] = [];
+    }
 
-            <a href="detalhes.html?id=${carro.id}">
-              <img src="${carro.imagemPrincipal}" class="card-img-top" alt="${carro.nome}">
-            </a>
+    const index = todosFavoritos[usuario.id].indexOf(carroId);
+    if (index > -1) {
+        todosFavoritos[usuario.id].splice(index, 1);
+    } else {
+        todosFavoritos[usuario.id].push(carroId); 
+    }
 
-            <div class="card-body">
+    localStorage.setItem('favoritos', JSON.stringify(todosFavoritos));
+    
+    
+    if (document.getElementById("detalhes-post")) {
+        mostrarDetalhes();
+    } else if (document.getElementById("lista-posts")) {
+        montarCardsCarros(listaAtualCarros);
+    }
+};
 
-              <h2 class="card-title">
-                <a href="detalhes.html?id=${carro.id}" class="text-decoration-none text-dark">
-                  ${carro.nome}
+function montarSliderDestaques() {
+    const areaDestaques = document.getElementById("destaques");
+
+    if (areaDestaques) {
+        const carrosDestaque = carros.filter(function(carro) {
+            return carro.destaque === true;
+        });
+
+        areaDestaques.innerHTML = `
+        <h2 class="mb-4">Itens em Destaque</h2>
+        <div id="carouselDestaques" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestaques" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselDestaques" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        `;
+
+        const carouselInner = document.querySelector(".carousel-inner");
+
+        carrosDestaque.forEach(function(carro, indice) {
+            carouselInner.innerHTML += `
+            <div class="carousel-item ${indice === 0 ? "active" : ""}">
+                <a href="detalhes.html?id=${carro.id}">
+                <img src="${carro.imagemPrincipal}" class="d-block w-100 imagem-slider" alt="${carro.nome}">
                 </a>
-              </h2>
-
-              <p class="meta">${carro.marca}</p>
-
-              <p class="card-text">${carro.descricao}</p>
-
-              <a href="detalhes.html?id=${carro.id}" class="btn btn-danger">
-                Ver detalhes
-              </a>
-
+                <div class="carousel-caption d-none d-md-block">
+                <h5>${carro.nome}</h5>
+                <p>${carro.descricao}</p>
+                </div>
             </div>
+            `;
+        });
+    }
+}
 
-          </div>
+function montarCardsCarros(lista = listaAtualCarros) {
+    const listaPosts = document.getElementById("lista-posts");
 
-        </article>
-      `;
-    });
-  }
+    if (listaPosts) {
+        listaPosts.innerHTML = "";
+        const favoritosUsuario = getFavoritosUsuario();
+
+        if (lista.length === 0) {
+            listaPosts.innerHTML = "<p>Nenhum carro encontrado.</p>";
+            return;
+        }
+
+        lista.forEach(function(carro) {
+            const isFavorito = favoritosUsuario.includes(carro.id);
+            const iconeCoracao = isFavorito ? '♥' : '♡'; 
+
+            listaPosts.innerHTML += `
+            <article class="col-12 col-md-6">
+                <div class="card h-100">
+                <button class="btn-favorito" onclick="toggleFavorito(${carro.id})">${iconeCoracao}</button>
+                <a href="detalhes.html?id=${carro.id}">
+                    <img src="${carro.imagemPrincipal}" class="card-img-top" alt="${carro.nome}">
+                </a>
+                <div class="card-body">
+                    <h2 class="card-title">
+                    <a href="detalhes.html?id=${carro.id}" class="text-decoration-none text-dark">
+                        ${carro.nome}
+                    </a>
+                    </h2>
+                    <p class="meta">${carro.marca}</p>
+                    <p class="card-text">${carro.descricao}</p>
+                    <a href="detalhes.html?id=${carro.id}" class="btn btn-danger">
+                    Ver detalhes
+                    </a>
+                </div>
+                </div>
+            </article>
+            `;
+        });
+    }
 }
 
 const campoPesquisa = document.getElementById("campo-pesquisa");
 
 if (campoPesquisa) {
-  campoPesquisa.addEventListener("input", function() {
+    campoPesquisa.addEventListener("input", function() {
+        const textoPesquisa = campoPesquisa.value.toLowerCase();
 
-    const textoPesquisa = campoPesquisa.value.toLowerCase();
-
-    const resultadoPesquisa = carros.filter(function(carro) {
-      return (
-        carro.nome.toLowerCase().includes(textoPesquisa) ||
-        carro.marca.toLowerCase().includes(textoPesquisa) ||
-        carro.motor.toLowerCase().includes(textoPesquisa) ||
-        String(carro.ano).includes(textoPesquisa)
-      );
+        if (textoPesquisa === "") {
+            listaAtualCarros = carros; 
+        } else {
+            listaAtualCarros = carros.filter(function(carro) {
+                return (
+                    carro.nome.toLowerCase().includes(textoPesquisa) || 
+                    carro.descricao.toLowerCase().includes(textoPesquisa) || //  
+                    carro.marca.toLowerCase().includes(textoPesquisa) ||
+                    carro.motor.toLowerCase().includes(textoPesquisa) ||
+                    String(carro.ano).includes(textoPesquisa)
+                );
+            });
+        }
+        montarCardsCarros(listaAtualCarros);
     });
-
-    montarCardsCarros(resultadoPesquisa);
-
-  });
 }
 
 const marcasFiltro = document.querySelectorAll(".marca-filtro");
 
 marcasFiltro.forEach(function(marcaItem) {
+    marcaItem.addEventListener("click", function() {
+        const marcaClicada = marcaItem.dataset.marca;
 
-  marcaItem.addEventListener("click", function() {
-
-    const marcaClicada = marcaItem.dataset.marca;
-
-    if (marcaClicada === "Todos") {
-
-      montarCardsCarros(carros);
-
-      return;
-    }
-
-    const carrosFiltrados = carros.filter(function(carro) {
-      return carro.marca === marcaClicada;
+        if (marcaClicada === "Todos") {
+            listaAtualCarros = carros;
+        } else {
+            listaAtualCarros = carros.filter(function(carro) {
+                return carro.marca === marcaClicada;
+            });
+        }
+        montarCardsCarros(listaAtualCarros);
     });
-
-    montarCardsCarros(carrosFiltrados);
-
-  });
-
 });
 
 function mostrarDetalhes() {
-  const detalhesPost = document.getElementById("detalhes-post");
+    const detalhesPost = document.getElementById("detalhes-post");
 
-  if (detalhesPost) {
-    const parametros = new URLSearchParams(window.location.search);
-    const id = Number(parametros.get("id"));
+    if (detalhesPost) {
+        const parametros = new URLSearchParams(window.location.search);
+        const id = Number(parametros.get("id"));
 
-    const carro = carros.find(function(item) {
-      return item.id === id;
-    });
+        const carro = carros.find(function(item) {
+            return item.id === id;
+        });
 
-    if (carro) {
-      detalhesPost.innerHTML = `
-        <div class="card p-4">
+        if (carro) {
+            const favoritosUsuario = getFavoritosUsuario();
+            const isFavorito = favoritosUsuario.includes(carro.id);
+            const iconeCoracao = isFavorito ? '♥' : '♡'; 
 
-          <img src="${carro.imagemPrincipal}" class="img-fluid rounded mb-4 img-detalhe" alt="${carro.nome}">
-
-          <h1>${carro.nome}</h1>
-
-          <p>${carro.descricao}</p>
-
-          <ul class="list-group mt-3">
-            <li class="list-group-item"><strong>Marca:</strong> ${carro.marca}</li>
-            <li class="list-group-item"><strong>Ano:</strong> ${carro.ano}</li>
-            <li class="list-group-item"><strong>Potência:</strong> ${carro.potencia}</li>
-            <li class="list-group-item"><strong>Velocidade máxima:</strong> ${carro.velocidade}</li>
-            <li class="list-group-item"><strong>Motor:</strong> ${carro.motor}</li>
-          </ul>
-
-          <h2 class="mt-4">Galeria de Fotos</h2>
-
-          <div class="row mt-3">
-
-            ${carro.fotos.map(function(foto) {
-              return `
-                <div class="col-12 col-md-4 mb-3">
-                  <div class="card h-100">
-                    <img src="${foto.imagem}" class="card-img-top" alt="${foto.titulo}">
-                    <div class="card-body">
-                      <h5 class="card-title">${foto.titulo}</h5>
-                    </div>
-                  </div>
+            detalhesPost.innerHTML = `
+            <div class="card p-4">
+                <img src="${carro.imagemPrincipal}" class="img-fluid rounded mb-4 img-detalhe" alt="${carro.nome}">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1>${carro.nome}</h1>
+                    <button class="btn-favorito-detalhes" onclick="toggleFavorito(${carro.id})">${iconeCoracao}</button>
                 </div>
-              `;
-            }).join("")}
-
-          </div>
-
-          <a href="index.html" class="btn btn-danger mt-4">
-            Voltar
-          </a>
-
-        </div>
-      `;
+                <p>${carro.descricao}</p>
+                <ul class="list-group mt-3">
+                <li class="list-group-item"><strong>Marca:</strong> ${carro.marca}</li>
+                <li class="list-group-item"><strong>Ano:</strong> ${carro.ano}</li>
+                <li class="list-group-item"><strong>Potência:</strong> ${carro.potencia}</li>
+                <li class="list-group-item"><strong>Velocidade máxima:</strong> ${carro.velocidade}</li>
+                <li class="list-group-item"><strong>Motor:</strong> ${carro.motor}</li>
+                </ul>
+                <h2 class="mt-4">Galeria de Fotos</h2>
+                <div class="row mt-3">
+                ${carro.fotos.map(function(foto) {
+                    return `
+                    <div class="col-12 col-md-4 mb-3">
+                        <div class="card h-100">
+                        <img src="${foto.imagem}" class="card-img-top" alt="${foto.titulo}">
+                        <div class="card-body">
+                            <h5 class="card-title">${foto.titulo}</h5>
+                        </div>
+                        </div>
+                    </div>
+                    `;
+                }).join("")}
+                </div>
+                <a href="index.html" class="btn btn-danger mt-4">
+                Voltar
+                </a>
+            </div>
+            `;
+        }
     }
-  }
 }
 
+atualizarMenu(); 
 montarSliderDestaques();
-montarCardsCarros();
+montarCardsCarros(listaAtualCarros);
 mostrarDetalhes();

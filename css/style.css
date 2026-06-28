@@ -33,9 +33,43 @@ body {
   padding: 12px;
 }
 
+
 .card {
   border-radius: 12px;
   overflow: hidden;
+  position: relative; 
+}
+
+
+.btn-favorito {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 1.8rem;
+  color: #dc3545;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 10;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-favorito:hover {
+  transform: scale(1.1);
+}
+
+.btn-favorito-detalhes {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #dc3545;
+  cursor: pointer;
 }
 
 .card-title {
